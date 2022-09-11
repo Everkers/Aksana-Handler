@@ -22,6 +22,15 @@ export class User {
   @Column()
   public name: string;
 
+  @Column()
+  public picture: string;
+
+  @Column()
+  public accounts: unknown[];
+
+  @Column()
+  public discord: string;
+
   @Index({ unique: true })
   @Column({
     unique: true,
@@ -43,7 +52,7 @@ export class User {
   public salt: string;
 
   @Column({ type: 'enum', enum: Role, default: Role.User })
-  public role: Role;
+  public role: Role = Role.User;
 
   @Column()
   @CreateDateColumn()
@@ -52,14 +61,4 @@ export class User {
   @Column()
   @UpdateDateColumn()
   public updatedAt: Date;
-
-  // @AfterLoad()
-  // public deletePropertis(): void {
-  //   // delete this.password;
-  //   // delete this.salt;
-  //   delete this.email;
-  //   if (this.password) {
-  //     console.log(this.password);
-  //   }
-  // }
 }
