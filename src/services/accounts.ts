@@ -29,11 +29,15 @@ export default class AccountsService {
     return userAccountsRes;
   }
   public async add(account: any, id: FindOneOptions<Accounts>): Promise<Accounts> {
-    const accountRes = await this.accountsRepository.save({
-      ...account,
-      userId: id.toString(),
-      status: AccountStatus.Public,
-    });
-    return accountRes;
+    try {
+      const accountRes = await this.accountsRepository.save({
+        ...account,
+        userId: id.toString(),
+        status: AccountStatus.Public,
+      });
+      return accountRes;
+    } catch (err) {
+      console.log(err);
+    }
   }
 }

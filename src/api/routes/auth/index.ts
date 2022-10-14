@@ -7,11 +7,6 @@ import middlewares from '../../middlewares';
 
 const route = Router();
 
-// @TODO Make Routes like this
-// export class AuthRoutes {
-//   constructor(@Inject(AuthService) private authService: AuthService) {}
-// }
-
 export default (app) => {
   app.use('/auth', route);
 

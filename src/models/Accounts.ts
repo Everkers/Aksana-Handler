@@ -24,6 +24,12 @@ export class Accounts {
   public championsWithSkins: unknown[];
 
   @Column()
+  public RP: unknown[];
+
+  @Column()
+  public allCurrencies: unknown[];
+
+  @Column()
   public loot: unknown[];
 
   @Column({})

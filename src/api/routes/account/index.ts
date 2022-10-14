@@ -60,11 +60,15 @@ export default (app: Router) => {
     '/add',
     celebrate({
       body: Joi.object({
-        championsWithSkins: Joi.object(),
-        loot: Joi.object().required(),
+        championsWithSkins: Joi.array().required(),
+        RP: Joi.object({
+          RP: Joi.number(),
+        }).required(),
+        allCurrencies: Joi.object().required(),
+        loot: Joi.array().required(),
         emailVerification: Joi.object().required(),
         honorLevel: Joi.object().required(),
-        emotes: Joi.object().required(),
+        emotes: Joi.array().required(),
         rankedStats: Joi.object().required(),
       }),
     }),

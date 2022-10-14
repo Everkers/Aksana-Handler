@@ -9,7 +9,7 @@ export default (app: express.Application) => {
   app.enable('trust proxy');
   app.use(cors());
   app.use(helmet());
-  app.use(bodyParser.json());
+  app.use(bodyParser.json({ limit: '50mb' }));
   app.use(errors());
 
   app.use('/api', routes);
