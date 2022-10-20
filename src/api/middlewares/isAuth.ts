@@ -7,7 +7,7 @@ import config from '../../config';
  * Authorization: Bearer ${JWT}
  *
  */
-const getTokenFromHeader = (req) => {
+export const getTokenFromHeader = (req) => {
   const { authorization } = req.headers;
   if (
     (authorization && authorization.split(' ')[0] === 'Token') ||

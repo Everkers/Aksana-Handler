@@ -27,6 +27,15 @@ export class Accounts {
   public RP: unknown[];
 
   @Column()
+  public profile: unknown;
+
+  @Column()
+  public mmr: unknown;
+
+  @Column()
+  public background: string;
+
+  @Column()
   public allCurrencies: unknown[];
 
   @Column()
