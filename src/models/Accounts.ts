@@ -41,7 +41,7 @@ export class Accounts {
   @Column()
   public loot: unknown[];
 
-  @Column({})
+  @ObjectIdColumn()
   public userId: ObjectID;
 
   @Column()
