@@ -37,7 +37,7 @@
     "puppeteer": "^19.0.0",
     "reflect-metadata": "^0.1.13",
     "typedi": "^0.10.0",
-    "typeorm": "^0.3.5",
+    "typeorm": "^0.3.10",
     "typeorm-typedi-extensions": "^0.4.1"
   },
   "devDependencies": {
