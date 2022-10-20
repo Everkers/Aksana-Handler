@@ -41,7 +41,7 @@ export class Accounts {
   @Column()
   public loot: unknown[];
 
-  @ObjectIdColumn()
+  @Column('text', { nullable: false })
   public userId: ObjectID;
 
   @Column()
@@ -62,7 +62,6 @@ export class Accounts {
   @Column()
   public opgg: string;
 
-  @Column()
   @CreateDateColumn()
   public createdAt: Date;
 

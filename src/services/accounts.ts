@@ -22,6 +22,7 @@ export default class AccountsService {
         _id: new ObjectId(id),
       },
     });
+
     if (accountRecord.userId.toString() === userId?.toString()) {
       return { ...accountRecord, owner: true };
     } else if (
